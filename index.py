@@ -3,7 +3,6 @@ from pathlib import Path
 
 import numpy as np
 import torch
-from config import MockPath
 from sklearn.linear_model import Ridge
 
 
