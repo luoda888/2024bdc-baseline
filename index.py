@@ -33,13 +33,7 @@ def get_test_data(global_data, temp_data, wind_data):
 
 def invoke(inputs):
     input_length, output_length, feature_num = 24 * 7, 24, 4 + 2
-    cwd = os.path.dirname(inputs)
-
-    if inputs.endswith('debugging'):
-        save_path = os.path.join(cwd, MockPath.DEBUG_OUTPUT.value)
-    else:
-        save_path = os.path.join(cwd, MockPath.EVAL_OUTPUT.value)
-
+    save_path = "/home/mw/project"
     global_data, temp_data, wind_data = load_data(inputs)
     data_length = global_data.shape[0]
     station_num = global_data.shape[-1]
